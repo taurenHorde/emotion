@@ -1,0 +1,529 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Long Cang', 'Poor Story', cursive;
+}
+
+body {
+    overflow-x: hidden;
+    height: 5000px;
+}
+
+header {
+    display: none;
+    /*사용 x */
+}
+
+.bg_wrap {
+    width: 100%;
+    height: 1000px;
+    background: url('../image/bg.jpg')no-repeat center;
+    background-size: cover;
+    position: absolute;
+}
+
+.bg {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    transition: 1s all;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bg:nth-of-type(1) {
+    background: rgba(54, 54, 54, 0.692);
+}
+
+.bg:nth-of-type(2) {
+    background: rgba(0, 128, 107, 0.438);
+}
+
+.bg:nth-of-type(3) {
+    background: rgba(120, 89, 177, 0.486);
+}
+
+.bg:nth-of-type(4) {
+    background: rgba(189, 32, 176, 0.493);
+}
+
+.bg:nth-of-type(5) {
+    background: rgba(179, 179, 179, 0.712);
+}
+
+.bg:not(:nth-of-type(1)) {
+    opacity: 0;
+}
+
+
+section {
+    width: 100%;
+    min-height: 1000px;
+    z-index: 10;
+
+
+}
+
+.main {
+    width: 1920px;
+    height: 1000px;
+    position: relative;
+    margin: 0 auto;
+    color: white
+}
+
+.welcome {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    text-align: center;
+    width: 675px;
+}
+
+.welcome h1 {
+    font-size: 6rem;
+}
+
+.welcome h5 {
+    font-size: 1.5rem;
+}
+
+.welcome .welcome_underline {
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.motto {
+    position: absolute;
+    top: 430px;
+    left: 100px;
+    width: 675px;
+    text-align: center;
+}
+
+.motto h1 {
+    font-size: 3rem;
+}
+
+.motto h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+
+.motto p {
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+
+.select {
+    position: absolute;
+    width: 100px;
+    height: 700px;
+    left: 910px;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.select>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    transition: .6s all;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.select>div h1 {
+    line-height: 100px;
+    transition: .6s all;
+    font-size: 2.8em;
+}
+
+.select>div:hover {
+    background: rgb(0, 0, 0);
+}
+
+.select>div:hover h1 {
+    color: rgb(255, 255, 255);
+}
+
+.select .hover_scroll h1:nth-of-type(2) {
+    opacity: 0;
+    line-height: 30px;
+}
+
+.select .hover_scroll:hover h1:nth-of-type(1) {
+    display: none;
+}
+
+.select .hover_scroll:hover h1:nth-of-type(2) {
+    opacity: 1;
+}
+
+.select .hover_scroll .scroll_box {
+    width: 20px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    top: 5px;
+    opacity: 0;
+    transition: .6s all;
+}
+
+.select .hover_scroll .scroll_box .scroll_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: black;
+    position: relative;
+    margin: 0 auto;
+    top: 5px;
+    animation: dotdot 1.5s infinite;
+    animation-direction: normal;
+}
+
+@keyframes dotdot {
+    from {
+        top: 5px;
+    }
+
+    to {
+        top: 35px;
+    }
+}
+
+
+.select .hover_scroll:hover .scroll_box {
+    opacity: 1;
+    background: white;
+}
+
+
+.view {
+    width: 675px;
+    height: 650px;
+    position: relative;
+    top: 120px;
+    left: 1090px;
+}
+
+.view .view_in {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 100px;
+    left: 0;
+    padding: 20px;
+    transition: .6s all;
+}
+
+.view .view_in .wise_word {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+.view .view_in .wise_word h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.view .view_in .wise_word h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.view .view_in .wise_word p {
+    font-size: 2rem;
+}
+
+
+
+
+.under {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.979);
+    top: 500px;
+    opacity: 0;
+    transition: .3s all;
+    pointer-events: none;
+
+}
+
+.under #last {
+    width: 1600px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 75px;
+    text-align: center;
+}
+
+.under #last h1 {
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* project */
+
+
+.project {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    transition: .5s all;
+}
+
+.project #first {
+    width: 1600px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 75px;
+    text-align: center;
+}
+
+.project #first h1 {
+    font-size: 20rem;
+    color: rgb(0, 0, 0);
+}
+
+
+.project #work {
+    position: fixed;
+    height: 650px;
+    display: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.project #work.on {
+    position: fixed;
+    top: 80px;
+    left: 500px;
+    display: block;
+}
+
+.project #work article {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    box-sizing: border-box;
+    float: left;
+    top: 90px;
+    margin-bottom: 75px;
+    margin-left: 200px;
+}
+
+
+.project #work article:nth-of-type(1) {
+    margin-left: 100px;
+    background: url('../pro1/contents/images/page1.png') no-repeat center;
+    background-size: cover;
+}
+
+/* .project #work article:nth-of-type(2) {} */
+
+.project #work article:nth-of-type(3) {
+    background: url('../pro3/index.png') no-repeat center;
+    background-size: cover;
+}
+
+.project #work article:nth-of-type(4) {
+    background: url('../pro4/index.png') no-repeat center;
+    background-size: cover;
+}
+
+.project #work article:nth-of-type(5) {
+    background: url('../pro5/index.png') no-repeat center;
+    background-size: cover;
+}
+
+.project #work article:nth-of-type(6) {
+    background: url('../pro6/index.png') no-repeat center;
+    background-size: contain;
+}
+
+
+.project #work article .work_title {
+    color: rgba(255, 255, 255, 0.336);
+    font-size: 6rem;
+    position: relative;
+    left: -60px;
+    transition: .6s all;
+}
+
+.project #work article:hover .work_title {
+    color: white;
+    left: 0;
+}
+
+
+
+.project #work article .work_explan {
+    position: absolute;
+    bottom: 20px;
+    left: -40px;
+    color: white;
+    opacity: 0;
+    transition: .6s all;
+}
+
+.project #work article:hover .work_explan {
+    left: 10px;
+    opacity: 1;
+
+}
+
+.project #work article .work_explan p {
+    font-size: 4rem;
+
+}
+
+.project #work article .work_click {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    color: white;
+    opacity: 0;
+    transition: .6s all;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.project #work article .work_click p {
+    font-size: 5rem;
+}
+
+.project #work article:hover .work_click {
+    bottom: 0px;
+    opacity: 1;
+}
+
+
+
+.project #work .last_art h1 {
+    font-size: 20rem;
+    color: white;
+}
+
+
+
+.project .back-word {
+    color: white;
+    font-size: 200px;
+    position: fixed;
+    top: 10px;
+    left: 1000px;
+    display: block;
+    z-index: 1;
+    opacity: 0.2;
+    display: none;
+}
+
+
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.295);
+    display: none;
+}
+
+footer .contact {
+    width: 1200px;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer .contact #con_title {
+    line-height: 150px;
+}
+
+footer .contact #con_title h1 {
+    font-size: 10rem;
+    color: rgba(255, 255, 255, 0.781)
+}
+
+footer .contact #con_word {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+
+footer .contact #con_word h2 {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.781)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*test*/
+
+#onepag {
+    position: absolute
+}
+
+#onepag>div {
+    width: 100px;
+}
